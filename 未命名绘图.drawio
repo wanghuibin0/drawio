@@ -1,9 +1,68 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
   <diagram name="第 1 页" id="gjnOzLvWlovJVRTnSMZi">
-    <mxGraphModel>
+    <mxGraphModel dx="1701" dy="906" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="etlwakC7s7TAzFv49pV--1" value="数据产物" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="95" y="421" width="278" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--2" value="核心模块" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="57" y="220" width="506" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--3" value="用户工作流" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="539" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--4" value="1. 运行收集命令&#xa;myprofiler collect ..." style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="55" y="45" width="211" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--5" value="2. 运行报告命令&#xa;myprofiler report ..." style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="316" y="45" width="207" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--6" value="&lt;b&gt;收集模块&lt;/b&gt;&#xa;(Collector)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="92" y="245" width="137" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--7" value="&lt;b&gt;分析与报告模块&lt;/b&gt;&#xa;(Analyzer &amp;amp; Reporter)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="311" y="245" width="217" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--8" value="&lt;b&gt;原始数据文件&#xa;(profile.raw)&lt;/b&gt;" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="133" y="446" width="111" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--9" value="最终报告&#xa;.txt, .svg, ..." style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="427" y="446" width="109" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--10" value="调用" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="etlwakC7s7TAzFv49pV--4" target="etlwakC7s7TAzFv49pV--6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--11" value="写入" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.33;entryY=0;rounded=0;" edge="1" parent="1" source="etlwakC7s7TAzFv49pV--6" target="etlwakC7s7TAzFv49pV--8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="161" y="421" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--12" value="调用" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="etlwakC7s7TAzFv49pV--5" target="etlwakC7s7TAzFv49pV--7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--13" value="读取" style="curved=1;startArrow=none;endArrow=block;exitX=0.22;exitY=1;entryX=1;entryY=0.17;rounded=0;" edge="1" parent="1" source="etlwakC7s7TAzFv49pV--7" target="etlwakC7s7TAzFv49pV--8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="318" y="348" />
+              <mxPoint x="318" y="421" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="etlwakC7s7TAzFv49pV--14" value="生成" style="curved=1;startArrow=none;endArrow=block;exitX=0.68;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="etlwakC7s7TAzFv49pV--7" target="etlwakC7s7TAzFv49pV--9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="482" y="348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
